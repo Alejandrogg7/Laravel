@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::resource('responsables', 'ResponsablesController');
-Route::get('borrartickets/{id}', 'ResponsablesController@destroy');
-Route::get('editartickets/{id}', 'ResponsablesController@edit');
-Route::post('editarticketsbd', 'ResponsablesController@update');
+Route::get('borrarresponsable/{id}', 'ResponsablesController@destroy');
+Route::get('editarresponsable/{id}', 'ResponsablesController@edit');
+Route::post('editarresponsablebd', 'ResponsablesController@update');
 
 Route::resource('tickets', 'TicketsController');
 Route::get('borrartickets/{id}', 'TicketsController@destroy');

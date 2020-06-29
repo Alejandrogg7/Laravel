@@ -125,10 +125,10 @@
                             <td>{{ $item->created_at }}</td>
                             <td>{{ $item->updated_at }}</td>
                             <td>
-                                <a href="/borrartickets/{{ $item->id }}">Eliminar</a>
+                                <a href="/borrarresponsable/{{ $item->id }}">Eliminar</a>
                             </td>
                             <td>
-                                <a href="/editartickets/{{ $item->id }}">Editar</a>
+                                <a href="/editarresponsable/{{ $item->id }}">Editar</a>
                             </td>
                         </tr>
                         @endforeach
