@@ -71,7 +71,7 @@
                 Vista Editar Responsables                
                 </div>
                 <div>
-                <form method="POST" action="/editarticketsbd">
+                <form method="POST" action="/editarresponsablebd">
                 @csrf
                 <div>
                         <label for="">Descripción ticket/tarea</label>

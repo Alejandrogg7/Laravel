@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -59,7 +59,53 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 35px;
+            }
+
+            .formu{
+              background-color: white;
+              border-radius: 3px;
+              font-size: 0.8em;
+              margin: 0 auto;
+              padding: 35px;
+              color: #999;
+              padding-right: 40px;
+            }
+
+            input, textarea{
+			      border: 0;
+			      outline: none;
+                  width: 100%;
+	        	}
+
+            .tabla{
+              background-color: white;
+              color: black;
+              text-align: left;
+              border-collapse: collapse;
+              width: 100%;
+              margin-left: 50px;
+            }
+
+            th, td{
+              padding: 20px;
+            }
+
+            thead{
+              background-color: #246355;
+              color: white;
+            }
+
+            tr:nth-child(even){
+              background-color: #ddd;
+            }
+            tr:hover td{
+              background-color: #369681;
+              color: white;
+            }
+            .contenedor{
+              display: flex;
+              flex-wrap: nowrap;
             }
         </style>
     </head>
@@ -70,31 +116,43 @@
                 <div class="title m-b-md">
                 Vista Responsables                
                 </div>
-                <div>
-                <form method="POST" action="/responsables">
+                <div class="contenedor">
+                <div class="formu">
+                <form method="POST" action="/responsables" class="needs-validation" novalidate>
                 @csrf
-                <div>
-                        <label for="">Descripción ticket/tarea</label>
-                        <input type="text" name="description_text" id="">
+                <div class="form-row">
+                <div class="col-md-10 mb-3">
+                        <label for="validationTooltip01">Descripción ticket/tarea</label>
+                        <input type="text" name="description_text" id="validationTooltip01" class="form-control" required>
+                        <div class="valid-tooltip">
+                            Registro correcto!
+                        </div>
                 </div>
                 
-                <div>
-                        <label for="">Responsable</label>
-                        <input type="text" name="responsable_text" id="">
+                <div class="col-md-10 mb-3">
+                        <label for="validationTooltip02">Responsable</label>
+                        <input type="text" name="responsable_text" id="validationTooltip02" class="form-control" required>
+                        <div class="valid-tooltip">
+                            Registro correcto!
+                        </div>
                 </div> 
 
                 <div>
-                        <label for="">Fecha</label>
-                        <input type="date" name="fecha_date" id="">
+                        <label for="validationTooltip03">Fecha</label>
+                        <input type="date" name="fecha_date" id="validationTooltip03" class="form-control" required>
+                        <div class="valid-tooltip">
+                            Registro correcto!
+                        </div>
                 </div> 
+                </div>
 
                 <div>
-                        <input type="submit" value="Guardar" id="">
+                        <input type="submit" value="Guardar" id="" class="btn btn-primary">
                 </div> 
                 </form> 
                 </div>
                 <div class="links">
-                    <table border="1">
+                    <table border="1" class="tabla">
                         <thead>
                             <th>
                                 id
@@ -133,8 +191,12 @@
                         </tr>
                         @endforeach
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </body>
 </html>
