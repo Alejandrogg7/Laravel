@@ -27,6 +27,11 @@ Route::get('borrartickets/{id}', 'TicketsController@destroy');
 Route::get('editartickets/{id}', 'TicketsController@edit');
 Route::post('editarticketsbd', 'TicketsController@update');
 
+Route::get('/', 'WelcomeController@index');
+
+Route::get('apiConsultarTickets', 'TicketsController@apiGetTickets')
+
+
 //Route::get('/', 'ResponsablesController@index');
 //Route::get('/update', 'ResponsablesController@update');
 //Route::post('/store', 'ResponsablesController@store');

@@ -84,6 +84,16 @@
                 </div> 
 
                 <div>
+                        <label for="">Latitud</label>
+                        <input type="text" name="lat_text" id="">
+                </div> 
+
+                <div>
+                        <label for="">Longitud</label>
+                        <input type="text" name="lng_text" id="">
+                </div> 
+
+                <div>
                         <label for="">Fecha</label>
                         <input type="date" name="fecha_date" id="">
                 </div> 
@@ -105,6 +115,14 @@
                             <th>
                                 Responsable
                             </th>
+
+                            <th>
+                                Latitud
+                            </th>
+
+                            <th>
+                                Longitud
+                            </th>
                             <th>
                                 Fecha solicitud
                             </th>
@@ -121,6 +139,8 @@
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->descripcion }}</td>
                             <td>{{ $item->responsable }}</td>
+                            <td>{{ $item->lat }}</td>
+                            <td>{{ $item->lng }}</td>
                             <td>{{ $item->fecha_solicitud }}</td>
                             <td>{{ $item->created_at }}</td>
                             <td>{{ $item->updated_at }}</td>

@@ -17,6 +17,8 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->string('descripcion');
             $table->string('responsable');
+            $table->string('lat');
+            $table->string('lng');
             $table->date('fecha_solicitud');
             $table->timestamps();
         });

@@ -34,6 +34,13 @@ class TicketsController extends Controller
         return view('tickets.index', compact('tickets'));
     }
 
+    public function apiGetTickets()
+    {
+        $tickets = Ticket::all();
+        return response()->json($tickets, 200);
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -56,6 +63,8 @@ class TicketsController extends Controller
         $ticketObject = new Ticket;
         $ticketObject->descripcion = $request->description_text;
         $ticketObject->responsable = $request->responsable_text;
+        $ticketObject->lat = $request->lat_text;
+        $ticketObject->lng = $request->lng_text;
         $ticketObject->fecha_solicitud = $request->fecha_date;
         $ticketObject->save();
 
